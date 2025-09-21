@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Login - KrishiAI</title>
+    <link rel="stylesheet" href="LOGIN.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../HOME/HOME.html" class="nav-link">Home</a>
+                <a href="../QUERY/QUERY.html" class="nav-link">Query</a>
+                <a href="../KNOWLAGE/KNOW-LIB.html" class="nav-link">Knowledge Library</a>
+                <a href="../NOTIFICATION/NOTIFICATION.html" class="nav-link">Notifications</a>
+                <a href="../MARKETPLACE/MARKETPLACE.html" class="nav-link">Marketplace</a>
+                <a href="../ADMIN/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;">Dashboard</a>
+                <a href="../ABOUT/ABOUT.html" class="nav-link">About</a>
+                <a href="../FEEDBACK/FEEDBACK.html" class="nav-link">Feedback</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English">English</a>
+                        <a href="#" data-lang="हिन्दी">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-card">
+                <div class="card-header">
+                    <h1>Farmer Login</h1>
+                    <p>Access your Digital Krishi Officer account</p>
+                </div>
+
+                <!-- Language Selector in Card -->
+                <div class="card-language-selector">
+                    <div class="language-selector">
+                        <button class="lang-btn card-lang-btn" id="card-lang-btn">
+                            <span id="card-selected-lang">English</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="lang-dropdown" id="card-lang-dropdown">
+                            <a href="#" data-lang="English">English</a>
+                            <a href="#" data-lang="हिन्दी">हिन्दी</a>
+                            <a href="#" data-lang="മലയാളം">മലയാളം</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="login-form" id="login-form">
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <div class="input-group">
+                            <span class="input-prefix">+91</span>
+                            <input type="tel" id="mobile" name="mobile" placeholder="Enter 10-digit mobile number" maxlength="10" required>
+                        </div>
+                        <div class="error-message" id="mobile-error"></div>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" id="send-otp-btn">
+                        <i class="fas fa-mobile-alt"></i>
+                        Send OTP
+                    </button>
+
+                    <div class="otp-section" id="otp-section" style="display: none;">
+                        <div class="form-group">
+                            <label for="otp">Enter OTP</label>
+                            <input type="text" id="otp" name="otp" placeholder="6-digit OTP" maxlength="6" required>
+                            <div class="error-message" id="otp-error"></div>
+                        </div>
+                        
+                        <div class="otp-timer">
+                            <span id="otp-timer-text">Resend OTP in <span id="timer">30</span>s</span>
+                            <button type="button" class="resend-btn" id="resend-otp-btn" style="display: none;">Resend OTP</button>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Login
+                        </button>
+                    </div>
+                </form>
+
+                <div class="login-divider">
+                    <span>or continue with</span>
+                </div>
+
+                <div class="social-login">
+                    <button class="btn btn-social btn-google">
+                        <i class="fab fa-google"></i>
+                        Login with Google
+                    </button>
+                    <button class="btn btn-social btn-digilocker">
+                        <i class="fas fa-id-card"></i>
+                        Login with DigiLocker
+                    </button>
+                </div>
+
+                <div class="login-footer">
+                    <p>New Farmer? <a href="../REGISTER/REGISTER.html">Create Account</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="../HOME/HOME.html">Home</a>
+                        <a href="../QUERY/QUERY.html">Query</a>
+                        <a href="../KNOWLAGE/KNOW-LIB.html">Knowlage Library</a>
+                        <a href="../NOTIFICATION/NOTIFICATION.html">Notifications</a>
+                        <a href="../MARKETPLACE/MARKETPLACE.html">Marketplace</a>
+                        <a href="../FEEDBACK/FEEDBACK.html">Feedback</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Help Center</a>
+                        <a href="../ABOUT/ABOUT.html">Contact Support</a>
+                        <a href="../ADMIN/ADMIN.html">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="LOGIN.js"></script>
+</body>
+</html>

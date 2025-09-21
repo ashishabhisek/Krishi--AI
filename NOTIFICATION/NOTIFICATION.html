@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications & Alerts - KrishiAI</title>
+    <link rel="stylesheet" href="HOME.css">
+    <link rel="stylesheet" href="NOTIFICATION.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+               <a href="../HOME/HOME.html" class="nav-link">Home</a>
+                <a href="../QUERY/QUERY.html" class="nav-link">Query</a>
+                <a href="../KNOWLAGE/KNOW-LIB.html" class="nav-link">Knowledge Library</a>
+                <a href="../NOTIFICATION/NOTIFICATION.html" class="nav-link">Notifications</a>
+                <a href="../MARKETPLACE/MARKETPLACE.html" class="nav-link">Marketplace</a>
+                <a href="../ADMIN/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;">Dashboard</a>
+                <a href="../ABOUT/ABOUT.html" class="nav-link">About</a>
+                <a href="../FEEDBACK/FEEDBACK.html" class="nav-link">Feedback</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English">English</a>
+                        <a href="#" data-lang="हिन्दी">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">
+                    <i class="fas fa-bell"></i>
+                    Notifications & Alerts
+                </h1>
+                <p class="page-subtitle">Stay updated with real-time alerts, weather warnings, and important announcements</p>
+            </div>
+
+            <div class="content-layout">
+                <!-- Personalized Notifications Panel -->
+                <aside class="notifications-sidebar">
+                    <div class="personal-panel">
+                        <div class="farmer-info">
+                            <div class="farmer-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="farmer-details">
+                                <h3>Raj Kumar</h3>
+                                <p>Farmer ID: #FK001</p>
+                                <span class="location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Aligarh, UP
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="personal-alerts">
+                            <h4>Your Personalized Alerts</h4>
+                            <div class="personal-alert-item critical">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <div class="alert-content">
+                                    <p>Brown planthopper risk detected in your wheat fields</p>
+                                    <span class="alert-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="personal-alert-item warning">
+                                <i class="fas fa-cloud-rain"></i>
+                                <div class="alert-content">
+                                    <p>Heavy rainfall expected in next 24 hours</p>
+                                    <span class="alert-time">4 hours ago</span>
+                                </div>
+                            </div>
+                            <div class="personal-alert-item info">
+                                <i class="fas fa-seedling"></i>
+                                <div class="alert-content">
+                                    <p>Optimal time for rice transplanting in your region</p>
+                                    <span class="alert-time">1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Alerts Content -->
+                <div class="alerts-content">
+                    <!-- Pest Outbreak Alerts -->
+                    <section class="alerts-section">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-bug"></i>
+                                Pest Outbreak Alerts
+                            </h2>
+                            <span class="section-count">4 Active Alerts</span>
+                        </div>
+                        
+                        <div class="alerts-grid">
+                            <div class="alert-card critical">
+                                <div class="alert-badge">Critical</div>
+                                <div class="alert-header">
+                                    <div class="pest-icon">
+                                        <i class="fas fa-bug"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h3>Brown Planthopper</h3>
+                                        <p class="affected-crops">Affects: Rice, Wheat</p>
+                                    </div>
+                                </div>
+                                <div class="alert-message">
+                                    <p>High risk reported in your area. Immediate action required to prevent crop damage.</p>
+                                </div>
+                                <div class="alert-footer">
+                                    <span class="alert-date">
+                                        <i class="fas fa-calendar"></i>
+                                        Jan 15, 2025
+                                    </span>
+                                    <span class="alert-region">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Uttar Pradesh, Haryana
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="alert-card warning">
+                                <div class="alert-badge">Warning</div>
+                                <div class="alert-header">
+                                    <div class="pest-icon">
+                                        <i class="fas fa-spider"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h3>Aphids</h3>
+                                        <p class="affected-crops">Affects: Mustard, Peas</p>
+                                    </div>
+                                </div>
+                                <div class="alert-message">
+                                    <p>Moderate risk detected. Monitor crops closely and prepare preventive measures.</p>
+                                </div>
+                                <div class="alert-footer">
+                                    <span class="alert-date">
+                                        <i class="fas fa-calendar"></i>
+                                        Jan 14, 2025
+                                    </span>
+                                    <span class="alert-region">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Punjab, Delhi
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="alert-card warning">
+                                <div class="alert-badge">Warning</div>
+                                <div class="alert-header">
+                                    <div class="pest-icon">
+                                        <i class="fas fa-virus"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h3>Leaf Blight</h3>
+                                        <p class="affected-crops">Affects: Tomato, Potato</p>
+                                    </div>
+                                </div>
+                                <div class="alert-message">
+                                    <p>Disease outbreak reported. Check plants for brown spots and take preventive action.</p>
+                                </div>
+                                <div class="alert-footer">
+                                    <span class="alert-date">
+                                        <i class="fas fa-calendar"></i>
+                                        Jan 13, 2025
+                                    </span>
+                                    <span class="alert-region">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Maharashtra, Karnataka
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="alert-card info">
+                                <div class="alert-badge">Info</div>
+                                <div class="alert-header">
+                                    <div class="pest-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h3>Regular Monitoring</h3>
+                                        <p class="affected-crops">General Advisory</p>
+                                    </div>
+                                </div>
+                                <div class="alert-message">
+                                    <p>Weekly field inspection recommended for early pest detection and prevention.</p>
+                                </div>
+                                <div class="alert-footer">
+                                    <span class="alert-date">
+                                        <i class="fas fa-calendar"></i>
+                                        Jan 12, 2025
+                                    </span>
+                                    <span class="alert-region">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        All Regions
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Weather Warnings -->
+                    <section class="alerts-section">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-cloud-sun"></i>
+                                Weather Warnings
+                            </h2>
+                            <span class="section-count">3 Active Warnings</span>
+                        </div>
+                        
+                        <div class="alerts-grid">
+                            <div class="alert-card critical">
+                                <div class="alert-badge">Critical</div>
+                                <div class="alert-header">
+                                    <div class="weather-icon">
+                                        <i class="fas fa-cloud-rain"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h3>Heavy Rainfall</h3>
+                                        <p class="weather-details">100-150mm expected</p>
+                                    </div>
+                                </div>
+                                <div class="alert-message">
+                                    <p>Severe thunderstorms with heavy rain expected. Secure harvested crops and protect livestock.</p>
+                                </div>
+                                <div class="alert-footer">
+                                    <span class="alert-date">
+                                        <i class="fas fa-calendar"></i>
+                                        Jan 16-17, 2025
+                                    </span>
+                                    <span class="alert-region">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Western UP, Delhi NCR
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="alert-card warning">
+                                <div class="alert-badge">Warning</div>
+                                <div class="alert-header">
+                                    <div class="weather-icon">
+                                        <i class="fas fa-thermometer-three-quarters"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h3>Heat Wave</h3>
+                                        <p class="weather-details">42-45°C expected</p>
+                                    </div>
+                                </div>
+                                <div class="alert-message">
+                                    <p>Extreme heat conditions forecasted. Increase irrigation frequency and provide shade for crops.</p>
+                                </div>
+                                <div class="alert-footer">
+                                    <span class="alert-date">
+                                        <i class="fas fa-calendar"></i>
+                                        Jan 18-20, 2025
+                                    </span>
+                                    <span class="alert-region">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Rajasthan, Gujarat
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="alert-card info">
+                                <div class="alert-badge">Advisory</div>
+                                <div class="alert-header">
+                                    <div class="weather-icon">
+                                        <i class="fas fa-wind"></i>
+                                    </div>
+                                    <div class="alert-info">
+                                        <h3>Strong Winds</h3>
+                                        <p class="weather-details">25-30 km/h gusts</p>
+                                    </div>
+                                </div>
+                                <div class="alert-message">
+                                    <p>Moderate to strong winds expected. Secure farm structures and support tall crops.</p>
+                                </div>
+                                <div class="alert-footer">
+                                    <span class="alert-date">
+                                        <i class="fas fa-calendar"></i>
+                                        Jan 15-16, 2025
+                                    </span>
+                                    <span class="alert-region">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Coastal regions
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Government Schemes & Announcements -->
+                    <section class="alerts-section">
+                        <div class="section-header">
+                            <h2>
+                                <i class="fas fa-bullhorn"></i>
+                                Government Schemes & Announcements
+                            </h2>
+                            <span class="section-count">4 New Announcements</span>
+                        </div>
+                        
+                        <div class="announcements-grid">
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <div class="scheme-icon">
+                                        <i class="fas fa-hand-holding-usd"></i>
+                                    </div>
+                                    <div class="scheme-info">
+                                        <h3>Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</h3>
+                                        <span class="scheme-tag">Financial Support</span>
+                                    </div>
+                                </div>
+                                <div class="scheme-description">
+                                    <p>Income support scheme providing ₹6,000 per year to eligible farmer families in three installments of ₹2,000 each.</p>
+                                </div>
+                                <div class="scheme-details">
+                                    <div class="validity">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>Valid until: Dec 31, 2025</span>
+                                    </div>
+                                    <button class="btn-read-more">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <div class="scheme-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="scheme-info">
+                                        <h3>Soil Health Card Scheme</h3>
+                                        <span class="scheme-tag">Soil Testing</span>
+                                    </div>
+                                </div>
+                                <div class="scheme-description">
+                                    <p>Free soil testing and health cards providing nutrient recommendations to improve soil fertility and crop productivity.</p>
+                                </div>
+                                <div class="scheme-details">
+                                    <div class="validity">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>Valid until: Mar 31, 2026</span>
+                                    </div>
+                                    <button class="btn-read-more">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <div class="scheme-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="scheme-info">
+                                        <h3>Pradhan Mantri Fasal Bima Yojana (PMFBY)</h3>
+                                        <span class="scheme-tag">Crop Insurance</span>
+                                    </div>
+                                </div>
+                                <div class="scheme-description">
+                                    <p>Comprehensive crop insurance covering yield losses due to natural calamities, pests, and diseases.</p>
+                                </div>
+                                <div class="scheme-details">
+                                    <div class="validity">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>Valid until: Jun 30, 2025</span>
+                                    </div>
+                                    <button class="btn-read-more">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="announcement-card">
+                                <div class="announcement-header">
+                                    <div class="scheme-icon">
+                                        <i class="fas fa-tint"></i>
+                                    </div>
+                                    <div class="scheme-info">
+                                        <h3>Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h3>
+                                        <span class="scheme-tag">Irrigation</span>
+                                    </div>
+                                </div>
+                                <div class="scheme-description">
+                                    <p>Comprehensive irrigation development program focusing on water use efficiency through micro-irrigation systems.</p>
+                                </div>
+                                <div class="scheme-details">
+                                    <div class="validity">
+                                        <i class="fas fa-calendar-check"></i>
+                                        <span>Valid until: Apr 30, 2026</span>
+                                    </div>
+                                    <button class="btn-read-more">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="../HOME/HOME.html">Home</a>
+                        <a href="../QUERY/QUERY.html">Query</a>
+                        <a href="../KNOWLAGE/KNOW-LIB.html">Knowlage Library</a>
+                        <a href="../NOTIFICATION/NOTIFICATION.html">Notifications</a>
+                        <a href="../MARKETPLACE/MARKETPLACE.html">Marketplace</a>
+                        <a href="../FEEDBACK/FEEDBACK.html">Feedback</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Help Center</a>
+                        <a href="../ABOUT/ABOUT.html">Contact Support</a>
+                        <a href="../ADMIN/ADMIN.html">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="HOME.js"></script>
+    <script src="NOTIFICATION.js"></script>
+</body>
+</html>

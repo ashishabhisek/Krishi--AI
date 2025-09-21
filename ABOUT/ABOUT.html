@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - KrishiAI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+               <a href="../HOME/HOME.html" class="nav-link">Home</a>
+                <a href="../QUERY/QUERY.html" class="nav-link">Query</a>
+                <a href="../KNOWLAGE/KNOW-LIB.html" class="nav-link">Knowledge Library</a>
+                <a href="../NOTIFICATION/NOTIFICATION.html" class="nav-link">Notifications</a>
+                <a href="../MARKETPLACE/MARKETPLACE.html" class="nav-link">Marketplace</a>
+                <a href="../ADMIN/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;">Dashboard</a>
+                <a href="../ABOUT/ABOUT.html" class="nav-link">About</a>
+                <a href="../FEEDBACK/FEEDBACK.html" class="nav-link">Feedback</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English">English</a>
+                        <a href="#" data-lang="हिन्दी">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Revolutionizing agriculture through AI-powered solutions</p>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Empowering Farmers with AI</h2>
+                <p>We're bridging the gap between traditional farming wisdom and cutting-edge artificial intelligence to create a more sustainable and prosperous future for agriculture.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Farmers Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1M+</div>
+                        <div class="stat-label">Queries Resolved</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Accuracy Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Purpose</h2>
+                <p>Driven by a commitment to transform agriculture through technology</p>
+            </div>
+            
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To democratize agricultural knowledge and expertise by providing every farmer with instant access to AI-powered advisory services, enabling them to make informed decisions that increase productivity, reduce costs, and promote sustainable farming practices.</p>
+                </div>
+                
+                <div class="vision-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To create a world where every farmer, regardless of location or resources, has access to the same level of agricultural expertise as the most advanced farming operations, fostering global food security and environmental sustainability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="key-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Comprehensive AI-powered tools designed specifically for modern farming needs</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Queries</h3>
+                    <p>Get instant, accurate answers to your farming questions powered by advanced machine learning algorithms trained on vast agricultural datasets.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Voice & Image Support</h3>
+                    <p>Ask questions using voice commands or upload images of crops, pests, or diseases for immediate AI-powered analysis and recommendations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Multilingual</h3>
+                    <p>Access our platform in multiple regional languages including Hindi, Malayalam, Tamil, and more, making technology accessible to all farmers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon purple">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Knowledge Resources</h3>
+                    <p>Comprehensive library of farming guides, best practices, weather updates, and market information curated by agricultural experts.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon teal">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Marketplace</h3>
+                    <p>Connect directly with suppliers, buyers, and other farmers. Access quality seeds, fertilizers, and equipment at competitive prices.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon red">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Expert Advisory</h3>
+                    <p>Get personalized advice from certified agricultural experts and extension officers for complex farming challenges and strategic planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>Passionate experts dedicated to revolutionizing agriculture through technology</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="C:\Users\ashis\OneDrive\Documents\Desktop\TEAM\me.jpg" alt="Ashish Abhisek Panda">
+                        <div class="photo-overlay">
+                            <a href="#" class="linkedin-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Ashish Abhisek Panda</h3>
+                        <p class="role">Chief Technology Officer</p>
+                        <p class="bio">PhD in Agricultural Engineering with 15+ years in AI and machine learning applications for agriculture.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Priya Sharma">
+                        <div class="photo-overlay">
+                            <a href="#" class="linkedin-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Priya Sharma</h3>
+                        <p class="role">Head of Product</p>
+                        <p class="bio">Former agricultural extension officer with deep understanding of farmer needs and rural technology adoption.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg" alt="Arjun Patel">
+                        <div class="photo-overlay">
+                            <a href="#" class="linkedin-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Arjun Patel</h3>
+                        <p class="role">Lead AI Engineer</p>
+                        <p class="bio">Specialist in natural language processing and computer vision with focus on agricultural applications.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Dr. Meera Reddy">
+                        <div class="photo-overlay">
+                            <a href="#" class="linkedin-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Meera Reddy</h3>
+                        <p class="role">Agricultural Advisor</p>
+                        <p class="bio">Crop scientist and sustainable farming expert with 20+ years of field experience across India.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://images.pexels.com/photos/2182975/pexels-photo-2182975.jpeg" alt="Vikram Singh">
+                        <div class="photo-overlay">
+                            <a href="#" class="linkedin-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Vikram Singh</h3>
+                        <p class="role">Data Scientist</p>
+                        <p class="bio">Expert in agricultural data analytics and predictive modeling for crop yield optimization.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo">
+                        <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg" alt="Anita Gupta">
+                        <div class="photo-overlay">
+                            <a href="#" class="linkedin-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Anita Gupta</h3>
+                        <p class="role">UX/UI Designer</p>
+                        <p class="bio">Passionate about creating intuitive interfaces that make complex technology accessible to rural users.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Farming?</h2>
+                <p>Join thousands of farmers who are already benefiting from AI-powered agricultural solutions. Start your journey towards smarter, more profitable farming today.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-white">Get Started</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Query</a>
+                        <a href="#">Knowlage Library</a>
+                        <a href="#">Notifications</a>
+                        <a href="#">Marketplace</a>
+                        <a href="#">Feedback</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Support</a>
+                        <a href="#">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="about.js"></script>
+</body>
+</html>

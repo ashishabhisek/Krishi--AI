@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiAI - AI-Based Farmer Query Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="HOME.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../HOME/HOME.html" class="nav-link">Home</a>
+                <a href="../QUERY/QUERY.html" class="nav-link">Query</a>
+                <a href="../KNOWLAGE/KNOW-LIB.html" class="nav-link">Knowledge Library</a>
+                <a href="../NOTIFICATION/NOTIFICATION.html" class="nav-link">Notifications</a>
+                <a href="../MARKETPLACE/MARKETPLACE.html" class="nav-link">Marketplace</a>
+                <a href="../ADMIN/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;">Dashboard</a>
+                <a href="../ABOUT/ABOUT.html" class="nav-link">About</a>
+                <a href="../FEEDBACK/FEEDBACK.html" class="nav-link">Feedback</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English">English</a>
+                        <a href="#" data-lang="हिन्दी">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Your Digital <span class="highlight">Krishi Officer</span> – always available, always learning, and always <span class="highlight">farmer-first</span>
+                </h1>
+                <p class="hero-description">
+                    Get instant AI-powered solutions to all your farming queries. From crop diseases to weather patterns, 
+                    market prices to best practices – your digital agricultural advisor is here 24/7.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" href = "../QUERY/QUERY.html">Ask a Query</button>
+                    <button class="btn btn-secondary" href = "../KNOWLAGE/KNOW-LIB.html" >Explore Knowledge</button>
+                    <button class="btn btn-primary" href = "../ADVISORY/ADVISORY.html">Advisory and Resources</button>
+                    <button class="btn btn-secondary" href = "../PROFILE/PROFILE.html">My Profile</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/2132227/pexels-photo-2132227.jpeg" alt="Modern farming with technology">
+                <div class="image-overlay">
+                    <p>Smart Farming, Better Yields</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose KrishiAI?</h2>
+                <p>Experience the future of agricultural support with our AI-powered platform designed specifically for Indian farmers.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant AI Answers</h3>
+                    <p>Get immediate responses to your farming questions powered by advanced AI technology trained on agricultural best practices.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Personalized Advisory</h3>
+                    <p>Receive customized advice based on your location, crop type, soil condition, and farming history for optimal results.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Available Anytime Anywhere</h3>
+                    <p>Access expert agricultural guidance 24/7 from anywhere - whether you're in the field or at home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login/Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-content">
+                <h2>Join Thousands of Smart Farmers</h2>
+                <p>Start your journey towards more productive and profitable farming. Create your free account today and get access to AI-powered agricultural expertise.</p>
+                <div class="auth-buttons">
+                    <button class="btn btn-white">Login</button>
+                    <button class="btn btn-outline">Register Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="../HOME/HOME.html">Home</a>
+                        <a href="../QUERY/QUERY.html">Query</a>
+                        <a href="../KNOWLAGE/KNOW-LIB.html">Knowlage Library</a>
+                        <a href="../NOTIFICATION/NOTIFICATION.html">Notifications</a>
+                        <a href="../MARKETPLACE/MARKETPLACE.html">Marketplace</a>
+                        <a href="../FEEDBACK/FEEDBACK.html">Feedback</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="../ABOUT/ABOUT.html">Help Center</a>
+                        <a href="../CONTACT/CONTACT.html">Contact Support</a>
+                        <a href="../ADMIN/ADMIN.html">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="HOME.js"></script>
+</body>
+</html>

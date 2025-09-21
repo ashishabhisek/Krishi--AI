@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - KrishiAI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="PROFILE.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+               <a href="../HOME/HOME.html" class="nav-link">Home</a>
+                <a href="../QUERY/QUERY.html" class="nav-link">Query</a>
+                <a href="../KNOWLAGE/KNOW-LIB.html" class="nav-link">Knowledge Library</a>
+                <a href="../NOTIFICATION/NOTIFICATION.html" class="nav-link">Notifications</a>
+                <a href="../MARKETPLACE/MARKETPLACE.html" class="nav-link">Marketplace</a>
+                <a href="../ADMIN/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;">Dashboard</a>
+                <a href="../ABOUT/ABOUT.html" class="nav-link">About</a>
+                <a href="../FEEDBACK/FEEDBACK.html" class="nav-link">Feedback</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English">English</a>
+                        <a href="#" data-lang="हिन्दी">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Header -->
+    <section class="profile-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+                <i class="fas fa-chevron-right"></i>
+                <span>My Profile</span>
+            </div>
+            <h1 class="page-title">My Profile</h1>
+            <p class="page-subtitle">Manage your account information and preferences</p>
+        </div>
+    </section>
+
+    <!-- Profile Content -->
+    <main class="profile-main">
+        <div class="container">
+            <div class="profile-grid">
+                <!-- Farmer Info Card -->
+                <section class="profile-card farmer-info">
+                    <div class="card-header">
+                        <h2><i class="fas fa-user"></i> Farmer Information</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="profile-photo">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Profile Photo" id="profile-img">
+                            <div class="photo-overlay">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="farmer-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <label>Name</label>
+                                    <span>Rajesh Kumar</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <label>Phone Number</label>
+                                    <span>+91 9876543210</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <label>Village/Location</label>
+                                    <span>Kottayam, Kerala</span>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-language"></i>
+                                <div>
+                                    <label>Preferred Language</label>
+                                    <span>Malayalam</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary edit-profile-btn" onclick="openEditModal()">
+                            <i class="fas fa-edit"></i> Edit Profile
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Query History -->
+                <section class="profile-card query-history">
+                    <div class="card-header">
+                        <h2><i class="fas fa-history"></i> Recent Queries</h2>
+                        <span class="view-all">View All</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="query-list">
+                            <div class="query-item">
+                                <div class="query-content">
+                                    <p class="query-text">What is the best treatment for rice blast disease?</p>
+                                    <div class="query-meta">
+                                        <span class="query-date">
+                                            <i class="fas fa-calendar"></i> 15 Jan 2025
+                                        </span>
+                                        <span class="query-status answered">
+                                            <i class="fas fa-check-circle"></i> Answered
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary view-response-btn" onclick="viewResponse(1)">
+                                    View Response
+                                </button>
+                            </div>
+
+                            <div class="query-item">
+                                <div class="query-content">
+                                    <p class="query-text">When is the best time to plant coconut saplings?</p>
+                                    <div class="query-meta">
+                                        <span class="query-date">
+                                            <i class="fas fa-calendar"></i> 12 Jan 2025
+                                        </span>
+                                        <span class="query-status answered">
+                                            <i class="fas fa-check-circle"></i> Answered
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary view-response-btn" onclick="viewResponse(2)">
+                                    View Response
+                                </button>
+                            </div>
+
+                            <div class="query-item">
+                                <div class="query-content">
+                                    <p class="query-text">How to improve soil fertility naturally?</p>
+                                    <div class="query-meta">
+                                        <span class="query-date">
+                                            <i class="fas fa-calendar"></i> 10 Jan 2025
+                                        </span>
+                                        <span class="query-status escalated">
+                                            <i class="fas fa-exclamation-triangle"></i> Escalated
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary view-response-btn" onclick="viewResponse(3)">
+                                    View Response
+                                </button>
+                            </div>
+
+                            <div class="query-item">
+                                <div class="query-content">
+                                    <p class="query-text">What fertilizer is best for pepper plants?</p>
+                                    <div class="query-meta">
+                                        <span class="query-date">
+                                            <i class="fas fa-calendar"></i> 08 Jan 2025
+                                        </span>
+                                        <span class="query-status answered">
+                                            <i class="fas fa-check-circle"></i> Answered
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary view-response-btn" onclick="viewResponse(4)">
+                                    View Response
+                                </button>
+                            </div>
+
+                            <div class="query-item">
+                                <div class="query-content">
+                                    <p class="query-text">How to control pest attacks on vegetables?</p>
+                                    <div class="query-meta">
+                                        <span class="query-date">
+                                            <i class="fas fa-calendar"></i> 05 Jan 2025
+                                        </span>
+                                        <span class="query-status answered">
+                                            <i class="fas fa-check-circle"></i> Answered
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary view-response-btn" onclick="viewResponse(5)">
+                                    View Response
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Saved Tips -->
+                <section class="profile-card saved-tips">
+                    <div class="card-header">
+                        <h2><i class="fas fa-bookmark"></i> Saved Tips</h2>
+                        <span class="view-all">View All</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h4>Organic Pest Control</h4>
+                                <p>Natural methods to protect your crops from harmful pests using neem oil and other organic solutions.</p>
+                                <button class="btn btn-outline read-more-btn" onclick="readTip(1)">
+                                    Read More
+                                </button>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-cloud-rain"></i>
+                                </div>
+                                <h4>Monsoon Farming Tips</h4>
+                                <p>Essential guidelines for preparing your farm during monsoon season and maximizing crop yield.</p>
+                                <button class="btn btn-outline read-more-btn" onclick="readTip(2)">
+                                    Read More
+                                </button>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <h4>Soil Health Management</h4>
+                                <p>Comprehensive guide to maintaining and improving soil quality for better crop production.</p>
+                                <button class="btn btn-outline read-more-btn" onclick="readTip(3)">
+                                    Read More
+                                </button>
+                            </div>
+
+                            <div class="tip-card">
+                                <div class="tip-icon">
+                                    <i class="fas fa-water"></i>
+                                </div>
+                                <h4>Water Conservation</h4>
+                                <p>Smart irrigation techniques and water-saving methods for sustainable farming practices.</p>
+                                <button class="btn btn-outline read-more-btn" onclick="readTip(4)">
+                                    Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Notification Preferences -->
+                <section class="profile-card notification-prefs">
+                    <div class="card-header">
+                        <h2><i class="fas fa-bell"></i> Notification Preferences</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="pref-list">
+                            <div class="pref-item">
+                                <div class="pref-info">
+                                    <i class="fas fa-sms"></i>
+                                    <div>
+                                        <h4>SMS Alerts</h4>
+                                        <p>Receive important updates and responses via SMS</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="sms-toggle" checked>
+                                    <label for="sms-toggle"></label>
+                                </div>
+                            </div>
+
+                            <div class="pref-item">
+                                <div class="pref-info">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <h4>Email Alerts</h4>
+                                        <p>Get detailed responses and newsletters via email</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="email-toggle" checked>
+                                    <label for="email-toggle"></label>
+                                </div>
+                            </div>
+
+                            <div class="pref-item">
+                                <div class="pref-info">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div>
+                                        <h4>Push Notifications</h4>
+                                        <p>Instant notifications on your mobile device</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-switch">
+                                    <input type="checkbox" id="push-toggle">
+                                    <label for="push-toggle"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary save-prefs-btn" onclick="savePreferences()">
+                            <i class="fas fa-save"></i> Save Preferences
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal-overlay" id="edit-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Edit Profile</h3>
+                <button class="close-btn" onclick="closeEditModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="edit-form">
+                    <div class="form-group">
+                        <label for="edit-name">Full Name</label>
+                        <input type="text" id="edit-name" value="Rajesh Kumar" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-phone">Phone Number</label>
+                        <input type="tel" id="edit-phone" value="+91 9876543210" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-location">Village/Location</label>
+                        <input type="text" id="edit-location" value="Kottayam, Kerala" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-language">Preferred Language</label>
+                        <select id="edit-language">
+                            <option value="Malayalam" selected>Malayalam</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="English">English</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeEditModal()">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Response Modal -->
+    <div class="modal-overlay" id="response-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Query Response</h3>
+                <button class="close-btn" onclick="closeResponseModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="response-content" id="response-content">
+                    <!-- Response content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="PROFILE.js"></script>
+</body>
+</html>

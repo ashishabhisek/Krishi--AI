@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KrishiAI - Marketplace</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="MARKETPLACE.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <i class="fas fa-seedling"></i>
+          <span>KrishiAI</span>
+        </div>
+        
+        <div class="nav-menu" id="nav-menu">
+          <a href="../HOME/HOME.html" class="nav-link">Home</a>
+                <a href="../QUERY/QUERY.html" class="nav-link">Query</a>
+                <a href="../KNOWLAGE/KNOW-LIB.html" class="nav-link">Knowledge Library</a>
+                <a href="../NOTIFICATION/NOTIFICATION.html" class="nav-link">Notifications</a>
+                <a href="../MARKETPLACE/MARKETPLACE.html" class="nav-link">Marketplace</a>
+                <a href="../ADMIN/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;">Dashboard</a>
+                <a href="../ABOUT/ABOUT.html" class="nav-link">About</a>
+                <a href="../FEEDBACK/FEEDBACK.html" class="nav-link">Feedback</a>
+        </div>
+        
+        <div class="nav-controls">
+          <!-- Language Selector -->
+          <div class="language-selector">
+            <button class="lang-btn" id="lang-btn">
+              <span id="selected-lang">English</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown">
+              <a href="#" data-lang="English">English</a>
+              <a href="#" data-lang="हिन्दी">हिन्दी</a>
+              <a href="#" data-lang="മലയാളം">മലയാളം</a>
+            </div>
+          </div>
+
+          <!-- Mobile Menu Toggle -->
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Marketplace</h1>
+        <p class="page-subtitle">Buy and sell agricultural products with fellow farmers</p>
+      </div>
+    </section>
+
+    <!-- Product Filter Bar -->
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-left">
+            <select class="filter-select" id="categoryFilter">
+              <option value="">All Categories</option>
+              <option value="seeds">Seeds</option>
+              <option value="fertilizers">Fertilizers</option>
+              <option value="tools">Tools</option>
+              <option value="machinery">Machinery</option>
+            </select>
+            
+            <div class="search-box">
+              <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+              <button class="search-btn">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="filter-right">
+            <select class="filter-select" id="sortFilter">
+              <option value="newest">Newest First</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Listings -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be populated by JavaScript -->
+        </div>
+        <div class="no-products" id="noProducts" style="display: none;">
+          <div class="no-products-content">
+            <i class="fas fa-search" style="font-size: 80px; color: #ccc; margin-bottom: 1rem;"></i>
+            <h3>No products found</h3>
+            <p>Try adjusting your search criteria or filters</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommended Products -->
+    <section class="recommended-section">
+      <div class="container">
+        <h2 class="section-title">Recommended Products</h2>
+        <div class="recommended-scroll">
+          <div class="recommended-grid" id="recommendedGrid">
+            <!-- Recommended products will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sell Your Product Section -->
+    <section class="sell-section">
+      <div class="container">
+        <div class="sell-content">
+          <div class="sell-header">
+            <h2 class="section-title">Sell Your Product</h2>
+            <p>List your agricultural products and reach more farmers</p>
+          </div>
+          <button class="sell-btn" id="openSellModal">Start Selling</button>
+        </div>
+      </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="../HOME/HOME.html">Home</a>
+                        <a href="../QUERY/QUERY.html">Query</a>
+                        <a href="../KNOWLAGE/KNOW-LIB.html">Knowlage Library</a>
+                        <a href="../NOTIFICATION/NOTIFICATION.html">Notifications</a>
+                        <a href="../MARKETPLACE/MARKETPLACE.html">Marketplace</a>
+                        <a href="../FEEDBACK/FEEDBACK.html">Feedback</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Help Center</a>
+                        <a href="../ABOUT/ABOUT.html">Contact Support</a>
+                        <a href="../ADMIN/ADMIN.html">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Seller Modal -->
+    <div class="modal" id="contactModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Contact Seller</h3>
+          <button class="close-btn" id="closeContactModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="seller-info">
+            <img id="sellerImage" src="" alt="Seller" class="seller-image">
+            <div class="seller-details">
+              <h4 id="sellerName"></h4>
+              <p id="sellerLocation"></p>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <strong>Phone:</strong>
+              <span id="sellerPhone"></span>
+            </div>
+            <div class="contact-item">
+              <strong>Email:</strong>
+              <span id="sellerEmail"></span>
+            </div>
+          </div>
+          <div class="contact-actions">
+            <button class="contact-btn phone-btn">Call Now</button>
+            <button class="contact-btn email-btn">Send Email</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sell Product Modal -->
+    <div class="modal" id="sellModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>List Your Product</h3>
+          <button class="close-btn" id="closeSellModal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form class="sell-form" id="sellForm">
+            <div class="form-group">
+              <label for="productName">Product Name</label>
+              <input type="text" id="productName" name="productName" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="productCategory">Category</label>
+              <select id="productCategory" name="productCategory" required>
+                <option value="">Select Category</option>
+                <option value="seeds">Seeds</option>
+                <option value="fertilizers">Fertilizers</option>
+                <option value="tools">Tools</option>
+                <option value="machinery">Machinery</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="productPrice">Price (₹)</label>
+              <input type="number" id="productPrice" name="productPrice" min="0" step="0.01" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="productDescription">Description</label>
+              <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label for="productImage">Product Image</label>
+              <div class="file-upload">
+                <input type="file" id="productImage" name="productImage" accept="image/*">
+                <label for="productImage" class="file-upload-label">
+                  <i class="fas fa-upload"></i>
+                  Choose Image
+                </label>
+              </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">List Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="MARKETPLACE.js"></script>
+  </body>
+</html>
