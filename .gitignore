@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules/
 .env
 .env.local
@@ -13,3 +14,20 @@ build/
 *~
 .nyc_output/
 coverage/
+=======
+node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+dist/
+build/
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.nyc_output/
+coverage/
+>>>>>>> 8b0b49ddf44c6ca05b5d0a6010076c1ff8a2b681
