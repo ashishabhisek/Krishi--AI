@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Library - KrishiAI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/KNOW-LIB.css">
+</head>
+<body>
+   
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="HOME.html" class="nav-link" data-translate="navHome">Home</a>
+                <a href="QUERY.html" class="nav-link" data-translate="navQuery">Query</a>
+                <a href="KNOW-LIB.html" class="nav-link" data-translate="navKnowledge">Knowledge Library</a>
+                <a href="NOTIFICATION.html" class="nav-link" data-translate="navNotifications">Notifications</a>
+                <a href="MARKETPLACE.html" class="nav-link" data-translate="navMarketplace">Marketplace</a>
+                <a href="ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;" data-translate="navDashboard">Dashboard</a>
+                <a href="ABOUT.html" class="nav-link" data-translate="navAbout">About</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English" data-code="en">English</a>
+                        <a href="#" data-lang="हिन्दी" data-code="hi">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം" data-code="ml">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Login Button -->
+                <a href="LOGIN.html" class="login-btn" id="login-btn">
+                    <i class="fas fa-user"></i>
+                    <span data-translate="login">Login</span>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1><i class="fas fa-book-open"></i> Knowledge Library</h1>
+                <p>Access comprehensive agricultural resources, expert guides, and government schemes to enhance your farming success</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Widget Section -->
+    <section class="weather-widget">
+        <div class="container">
+            <div class="weather-card">
+                <div class="weather-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="weather-info">
+                    <h3>Today's Weather</h3>
+                    <div class="weather-details">
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Kochi, Kerala</p>
+                        <p class="temperature">28°C</p>
+                        <p class="condition">Sunny</p>
+                    </div>
+                </div>
+                <div class="weather-forecast">
+                    <p>Perfect weather for outdoor farming activities</p>
+                    <small>Last updated: 2 minutes ago</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Crop Calendars -->
+    <section class="crop-calendars">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-calendar-alt"></i> Seasonal Crop Calendars</h2>
+                <p>Plan your cropping season with our comprehensive crop calendars tailored for different regions</p>
+            </div>
+            
+            <div class="calendar-grid">
+                <div class="calendar-card">
+                    <div class="card-header">
+                        <div class="crop-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Rice</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="season-info">
+                            <div class="season-item">
+                                <span class="label">Sowing:</span>
+                                <span class="period">June - July</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Harvesting:</span>
+                                <span class="period">November - December</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Duration:</span>
+                                <span class="period">120-150 days</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-header">
+                        <div class="crop-icon wheat">
+                            <i class="fas fa-wheat-awn"></i>
+                        </div>
+                        <h3>Wheat</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="season-info">
+                            <div class="season-item">
+                                <span class="label">Sowing:</span>
+                                <span class="period">November - December</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Harvesting:</span>
+                                <span class="period">April - May</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Duration:</span>
+                                <span class="period">120-135 days</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-header">
+                        <div class="crop-icon corn">
+                            <i class="fas fa-corn"></i>
+                        </div>
+                        <h3>Maize</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="season-info">
+                            <div class="season-item">
+                                <span class="label">Sowing:</span>
+                                <span class="period">June - July</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Harvesting:</span>
+                                <span class="period">October - November</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Duration:</span>
+                                <span class="period">90-120 days</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-small">View Details</button>
+                    </div>
+                </div>
+
+                <div class="calendar-card">
+                    <div class="card-header">
+                        <div class="crop-icon cotton">
+                            <i class="fas fa-cotton"></i>
+                        </div>
+                        <h3>Cotton</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="season-info">
+                            <div class="season-item">
+                                <span class="label">Sowing:</span>
+                                <span class="period">May - June</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Harvesting:</span>
+                                <span class="period">November - January</span>
+                            </div>
+                            <div class="season-item">
+                                <span class="label">Duration:</span>
+                                <span class="period">180-210 days</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-small">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pest & Disease Management -->
+    <section class="pest-management">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-bug"></i> Pest & Disease Management</h2>
+                <p>Learn to identify and control common pests and diseases affecting your crops</p>
+            </div>
+            
+            <div class="pest-grid">
+                <div class="pest-card">
+                    <div class="pest-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                    </div>
+                    <div class="pest-content">
+                        <h3>Brown Plant Hopper</h3>
+                        <p class="pest-crops"><span>Affects:</span> Rice, Wheat</p>
+                        <p class="pest-description">Small brown insects that suck plant sap, causing yellowing and stunted growth.</p>
+                        <div class="control-tips">
+                            <h4>Control Methods:</h4>
+                            <ul>
+                                <li>Use resistant varieties</li>
+                                <li>Apply neem-based insecticides</li>
+                                <li>Maintain proper water management</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-small">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="pest-card">
+                    <div class="pest-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-virus"></i>
+                        </div>
+                    </div>
+                    <div class="pest-content">
+                        <h3>Leaf Blight</h3>
+                        <p class="pest-crops"><span>Affects:</span> Rice, Maize</p>
+                        <p class="pest-description">Fungal disease causing brown spots on leaves, leading to reduced photosynthesis.</p>
+                        <div class="control-tips">
+                            <h4>Prevention & Control:</h4>
+                            <ul>
+                                <li>Use certified disease-free seeds</li>
+                                <li>Apply fungicides as preventive measure</li>
+                                <li>Ensure proper field drainage</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-small">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="pest-card">
+                    <div class="pest-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                    </div>
+                    <div class="pest-content">
+                        <h3>Cotton Bollworm</h3>
+                        <p class="pest-crops"><span>Affects:</span> Cotton, Tomato</p>
+                        <p class="pest-description">Caterpillars that feed on flowers, fruits, and bolls, causing significant yield loss.</p>
+                        <div class="control-tips">
+                            <h4>Management Strategy:</h4>
+                            <ul>
+                                <li>Use pheromone traps</li>
+                                <li>Release beneficial insects</li>
+                                <li>Apply Bt-based sprays</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-small">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Schemes -->
+    <section class="government-schemes">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-landmark"></i> Government Schemes & Subsidies</h2>
+                <p>Explore various government initiatives and financial support programs for farmers</p>
+            </div>
+            
+            <div class="schemes-grid">
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>PM-KISAN</h3>
+                        <p class="scheme-description">Direct income support of ₹6,000 per year to small and marginal farmers in three equal installments.</p>
+                        <div class="scheme-benefits">
+                            <ul>
+                                <li>₹2,000 every 4 months</li>
+                                <li>Direct bank transfer</li>
+                                <li>No processing fees</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Soil Health Card</h3>
+                        <p class="scheme-description">Free soil testing and customized fertilizer recommendations to improve soil health and crop productivity.</p>
+                        <div class="scheme-benefits">
+                            <ul>
+                                <li>Free soil testing</li>
+                                <li>Nutrient recommendations</li>
+                                <li>Digital access</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Crop Insurance</h3>
+                        <p class="scheme-description">Pradhan Mantri Fasal Bima Yojana provides comprehensive insurance coverage against crop losses.</p>
+                        <div class="scheme-benefits">
+                            <ul>
+                                <li>Low premium rates</li>
+                                <li>Quick claim settlement</li>
+                                <li>Technology-driven assessment</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="scheme-card">
+                    <div class="scheme-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="scheme-content">
+                        <h3>Drip Irrigation Subsidy</h3>
+                        <p class="scheme-description">Financial assistance for adopting water-efficient micro-irrigation systems to conserve water.</p>
+                        <div class="scheme-benefits">
+                            <ul>
+                                <li>Up to 55% subsidy</li>
+                                <li>Water conservation</li>
+                                <li>Increased efficiency</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorials -->
+    <section class="video-tutorials">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-play-circle"></i> Video Tutorials</h2>
+                <p>Learn from expert agricultural practices through our comprehensive video library</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://www.agrifarming.in/wp-content/uploads/2022/11/Control-Pests-and-Diseases-in-Bananas1.jpg" alt="Banana Pest Control">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="video-duration">8:24</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Banana Pest Control - Complete Guide</h3>
+                        <p>Learn effective methods to identify and control common banana pests including nematodes, aphids, and thrips.</p>
+                        <div class="video-meta">
+                            <span class="views"><i class="fas fa-eye"></i> 12,540 views</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://community.earthytales.in/uploads/articles/Methods_Of_Organic_Farming1.jpg" alt="Organic Farming">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="video-duration">15:18</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Organic Farming Basics - Getting Started</h3>
+                        <p>Comprehensive guide to transitioning to organic farming methods, soil preparation, and natural pest management.</p>
+                        <div class="video-meta">
+                            <span class="views"><i class="fas fa-eye"></i> 25,630 views</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://www.simplegreenenergy.org/wp-content/uploads/2024/07/51-1024x576.png" alt="Smart Irrigation">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="video-duration">11:45</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Smart Irrigation Techniques</h3>
+                        <p>Modern water management strategies including drip irrigation setup, scheduling, and maintenance for optimal crop growth.</p>
+                        <div class="video-meta">
+                            <span class="views"><i class="fas fa-eye"></i> 18,950 views</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="../HOME/HOME.html" data-translate="navHome">Home</a>
+                        <a href="../QUERY/QUERY.html" data-translate="navQuery">Query</a>
+                        <a href="../KNOWLAGE/KNOW-LIB.html" data-translate="navKnowledge">Knowledge Library</a>
+                        <a href="../NOTIFICATION/NOTIFICATION.html" data-translate="navNotifications">Notifications</a>
+                        <a href="../MARKETPLACE/MARKETPLACE.html" data-translate="navMarketplace">Marketplace</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="../FEEDBACK/FEEDBACK.html" data-translate="navAbout">Feedback</a>
+                        <a href="../CONTACT/CONTACT.html">Contact Support</a>
+                        <a href="../ADMIN/ADMIN.html" data-translate="navDashboard">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/KNOW-LIB.js"></script>
+</body>
+</html>

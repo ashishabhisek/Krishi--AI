@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiAI - AI-Based Farmer Query Support</title>
+    <link rel="stylesheet" href="src/styles/HOME.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-translate="navHome">Home</a>
+                <a href="src/pages/QUERY.html" class="nav-link" data-translate="navQuery">Query</a>
+                <a href="src/pages/KNOW-LIB.html" class="nav-link" data-translate="navKnowledge">Knowledge Library</a>
+                <a href="src/pages/NOTIFICATION.html" class="nav-link" data-translate="navNotifications">Notifications</a>
+                <a href="src/pages/MARKETPLACE.html" class="nav-link" data-translate="navMarketplace">Marketplace</a>
+                <a href="src/pages/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;" data-translate="navDashboard">Dashboard</a>
+                <a href="src/pages/ABOUT.html" class="nav-link" data-translate="navAbout">About</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English" data-code="en">English</a>
+                        <a href="#" data-lang="हिन्दी" data-code="hi">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം" data-code="ml">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Login Button -->
+                <a href="src/pages/LOGIN.html" class="login-btn" id="login-btn">
+                    <i class="fas fa-user"></i>
+                    <span data-translate="login">Login</span>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-translate="heroTitle">
+                    Your Digital <span class="highlight">Krishi Officer</span> – always available, always learning, and always <span class="highlight">farmer-first</span>
+                </h1>
+                <p class="hero-description" data-translate="heroDescription">
+                    Get instant AI-powered solutions to all your farming queries. From crop diseases to weather patterns, 
+                    market prices to best practices – your digital agricultural advisor is here 24/7.
+                </p>
+                <div class="hero-buttons">
+                    <a href="src/pages/ADVISORY.html" class="btn btn-primary" data-translate="advisory">Advisory and Resources</a>
+                    <a href="src/pages/PROFILE.html" class="btn btn-secondary" data-translate="profile">My Profile</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://web-assets.bcg.com/dims4/default/f0aa1c8/2147483647/strip/true/crop/2880x1620+0+0/resize/768x432!/format/webp/quality/90/?url=http%3A%2F%2Fboston-consulting-group-brightspot.s3.amazonaws.com%2Fd3%2Fb1%2Fb1945a374994a81308c707357eee%2Fmaking-regenerative-agriculture-profitable-for-us-farmers-rectangle.jpg" alt="Modern farming with technology" style="width: 100%; height: auto;">
+                <div class="image-overlay">
+                    <p>Smart Farming, Better Yields</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-translate="whyChoose">Why Choose KrishiAI?</h2>
+                <p data-translate="whyChooseDesc">Experience the future of agricultural support with our AI-powered platform designed specifically for Indian farmers.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon green">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 data-translate="instantAI">Instant AI Answers</h3>
+                    <p data-translate="instantAIDesc">Get immediate responses to your farming questions powered by advanced AI technology trained on agricultural best practices.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 data-translate="personalized">Personalized Advisory</h3>
+                    <p data-translate="personalizedDesc">Receive customized advice based on your location, crop type, soil condition, and farming history for optimal results.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon orange">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-translate="available">Available Anytime Anywhere</h3>
+                    <p data-translate="availableDesc">Access expert agricultural guidance 24/7 from anywhere - whether you're in the field or at home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login/Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-content">
+                <h2 data-translate="joinFarmers">Join Thousands of Smart Farmers</h2>
+                <p data-translate="joinDesc">Start your journey towards more productive and profitable farming. Create your free account today and get access to AI-powered agricultural expertise.</p>
+                <div class="auth-buttons">
+                    <a href="src/pages/LOGIN.html" class="btn btn-white" data-translate="login">Login</a>
+                    <a href="src/pages/REGISTER.html" class="btn btn-outline" data-translate="registerNow">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p data-translate="empowering">Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="contactUs">Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="quickLinks">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html" data-translate="navHome">Home</a>
+                        <a href="src/pages/QUERY.html" data-translate="navQuery">Query</a>
+                        <a href="src/pages/KNOW-LIB.html" data-translate="navKnowledge">Knowledge Library</a>
+                        <a href="src/pages/NOTIFICATION.html" data-translate="navNotifications">Notifications</a>
+                        <a href="src/pages/MARKETPLACE.html" data-translate="navMarketplace">Marketplace</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="src/pages/FEEDBACK.html" data-translate="navAbout">Feedback</a>
+                        <a href="src/pages/CONTACT.html">Contact Support</a>
+                        <a href="src/pages/ADMIN.html" data-translate="navDashboard">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-translate="followUs">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p data-translate="copyright">&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="src/js/HOME.js"></script>
+</body>
+</html>

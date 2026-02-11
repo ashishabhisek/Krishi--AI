@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Farmer Account - KrishiAI</title>
+    <link rel="stylesheet" href="../styles/REGISTER.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-seedling"></i>
+                <span>KrishiAI</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="../HOME/HOME.html" class="nav-link">Home</a>
+                <a href="../QUERY/QUERY.html" class="nav-link">Query</a>
+                <a href="../KNOWLAGE/KNOW-LIB.html" class="nav-link">Knowledge Library</a>
+                <a href="../NOTIFICATION/NOTIFICATION.html" class="nav-link">Notifications</a>
+                <a href="../MARKETPLACE/MARKETPLACE.html" class="nav-link">Marketplace</a>
+                <a href="../ADMIN/ADMIN.html" class="nav-link admin-only" id="dashboard-link" style="display: none;">Dashboard</a>
+                <a href="../ABOUT/ABOUT.html" class="nav-link">About</a>
+                <a href="../FEEDBACK/FEEDBACK.html" class="nav-link">Feedback</a>
+            </div>
+
+            <div class="nav-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="selected-lang">English</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="English">English</a>
+                        <a href="#" data-lang="हिन्दी">हिन्दी</a>
+                        <a href="#" data-lang="മലയാളം">മലയാളം</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="register-section">
+        <div class="container">
+            <div class="register-card">
+                <div class="card-header">
+                    <h1>Create Farmer Account</h1>
+                    <p>Join thousands of smart farmers using Digital Krishi Officer</p>
+                </div>
+
+                <form class="register-form" id="register-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            <div class="error-message" id="fullName-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number <span class="required">*</span></label>
+                            <div class="input-group">
+                                <span class="input-prefix">+91</span>
+                                <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" maxlength="10" required>
+                            </div>
+                            <div class="error-message" id="mobile-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="village">Village <span class="required">*</span></label>
+                            <input type="text" id="village" name="village" placeholder="Enter your village name" required>
+                            <div class="error-message" id="village-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="state">State <span class="required">*</span></label>
+                            <select id="state" name="state" required>
+                                <option value="">Select State</option>
+                                <option value="andhra-pradesh">Andhra Pradesh</option>
+                                <option value="arunachal-pradesh">Arunachal Pradesh</option>
+                                <option value="assam">Assam</option>
+                                <option value="bihar">Bihar</option>
+                                <option value="chhattisgarh">Chhattisgarh</option>
+                                <option value="goa">Goa</option>
+                                <option value="gujarat">Gujarat</option>
+                                <option value="haryana">Haryana</option>
+                                <option value="himachal-pradesh">Himachal Pradesh</option>
+                                <option value="jharkhand">Jharkhand</option>
+                                <option value="karnataka">Karnataka</option>
+                                <option value="kerala">Kerala</option>
+                                <option value="madhya-pradesh">Madhya Pradesh</option>
+                                <option value="maharashtra">Maharashtra</option>
+                                <option value="manipur">Manipur</option>
+                                <option value="meghalaya">Meghalaya</option>
+                                <option value="mizoram">Mizoram</option>
+                                <option value="nagaland">Nagaland</option>
+                                <option value="odisha">Odisha</option>
+                                <option value="punjab">Punjab</option>
+                                <option value="rajasthan">Rajasthan</option>
+                                <option value="sikkim">Sikkim</option>
+                                <option value="tamil-nadu">Tamil Nadu</option>
+                                <option value="telangana">Telangana</option>
+                                <option value="tripura">Tripura</option>
+                                <option value="uttar-pradesh">Uttar Pradesh</option>
+                                <option value="uttarakhand">Uttarakhand</option>
+                                <option value="west-bengal">West Bengal</option>
+                            </select>
+                            <div class="error-message" id="state-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="district">District <span class="required">*</span></label>
+                            <select id="district" name="district" required disabled>
+                                <option value="">Select State First</option>
+                            </select>
+                            <div class="error-message" id="district-error"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crops">Crops Grown</label>
+                            <div class="crops-container">
+                                <input type="text" id="crop-input" placeholder="Type crop name and press Enter">
+                                <div class="crops-tags" id="crops-tags"></div>
+                                <input type="hidden" id="crops" name="crops">
+                            </div>
+                            <div class="crop-suggestions">
+                                <span class="crop-suggestion" data-crop="Rice">Rice</span>
+                                <span class="crop-suggestion" data-crop="Wheat">Wheat</span>
+                                <span class="crop-suggestion" data-crop="Coconut">Coconut</span>
+                                <span class="crop-suggestion" data-crop="Pepper">Pepper</span>
+                                <span class="crop-suggestion" data-crop="Cardamom">Cardamom</span>
+                                <span class="crop-suggestion" data-crop="Rubber">Rubber</span>
+                                <span class="crop-suggestion" data-crop="Banana">Banana</span>
+                                <span class="crop-suggestion" data-crop="Mango">Mango</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="preferredLanguage">Preferred Language</label>
+                            <select id="preferredLanguage" name="preferredLanguage">
+                                <option value="English">English</option>
+                                <option value="हिन्दी">हिन्दी (Hindi)</option>
+                                <option value="മലയാളം">മലയാളം (Malayalam)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pin">4-Digit PIN (Optional)</label>
+                            <input type="password" id="pin" name="pin" placeholder="Create 4-digit PIN" maxlength="4">
+                            <div class="help-text">For quick access to your account</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Send me updates about new features and agricultural tips
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i>
+                        Create Account
+                    </button>
+                </form>
+
+                <div class="register-footer">
+                    <p>Already have an account? <a href="LOGIN.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-seedling"></i>
+                        <span>KrishiAI</span>
+                    </div>
+                    <p>Empowering farmers with AI-driven agricultural solutions for a more productive and sustainable future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +91 1800-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> support@krishiai.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> New Delhi, India</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="../HOME/HOME.html">Home</a>
+                        <a href="../QUERY/QUERY.html">Query</a>
+                        <a href="../KNOWLAGE/KNOW-LIB.html">Knowlage Library</a>
+                        <a href="../NOTIFICATION/NOTIFICATION.html">Notifications</a>
+                        <a href="../MARKETPLACE/MARKETPLACE.html">Marketplace</a>
+                        <a href="../FEEDBACK/FEEDBACK.html">Feedback</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Help Center</a>
+                        <a href="../ABOUT/ABOUT.html">Contact Support</a>
+                        <a href="../ADMIN/ADMIN.html">Admin Dashboard</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 KrishiAI - AI-Based Farmer Query Support and Advisory System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/REGISTER.js"></script>
+</body>
+</html>

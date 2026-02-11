@@ -1,0 +1,1066 @@
+/* Knowledge Library Specific Styles - Updated to match HOME design */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Styles - Matching HOME exactly */
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2d5016;
+}
+
+.nav-logo i {
+    color: #4a7c59;
+    font-size: 28px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #4a7c59;
+    background-color: #f0f8f0;
+    transform: translateY(-2px);
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+}
+
+.lang-btn {
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    border-color: #4a7c59;
+    color: #4a7c59;
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-width: 120px;
+    display: none;
+    z-index: 1001;
+}
+
+.lang-dropdown.active {
+    display: block;
+}
+
+.lang-dropdown a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.lang-dropdown a:hover {
+    background-color: #f0f8f0;
+    color: #4a7c59;
+    cursor: pointer;
+}
+
+.lang-dropdown a:active {
+    background-color: #4a7c59;
+    color: white;
+}
+
+/* Language transition effects */
+[data-translate] {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.language-changing [data-translate] {
+    opacity: 0.7;
+}
+
+/* Login Button */
+.login-btn {
+    background: #4a7c59;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(74, 124, 89, 0.3);
+}
+
+.login-btn:hover {
+    background: #3d6b4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 124, 89, 0.4);
+}
+
+.login-btn i {
+    font-size: 16px;
+}
+
+/* Login Button */
+.login-btn {
+    background: #4a7c59;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(74, 124, 89, 0.3);
+}
+
+.login-btn:hover {
+    background: #3d6b4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 124, 89, 0.4);
+}
+
+.login-btn i {
+    font-size: 16px;
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+    padding: 120px 0 80px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2d5016;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.header-content h1 i {
+    color: #4a7c59;
+}
+
+.header-content p {
+    font-size: 20px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2d5016;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.section-header h2 i {
+    color: #4a7c59;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Weather Widget */
+.weather-widget {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.weather-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.weather-icon {
+    font-size: 48px;
+    color: #f57c00;
+    background: #fff3e0;
+    padding: 30px;
+    border-radius: 50%;
+    min-width: 100px;
+    text-align: center;
+}
+
+.weather-info h3 {
+    color: #2d5016;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.weather-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+}
+
+.location {
+    color: #666;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.temperature {
+    font-size: 32px;
+    font-weight: bold;
+    color: #4a7c59;
+}
+
+.condition {
+    color: #666;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.weather-forecast {
+    margin-left: auto;
+    text-align: right;
+}
+
+.weather-forecast p {
+    color: #4a7c59;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.weather-forecast small {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Seasonal Crop Calendars */
+.crop-calendars {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.calendar-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.calendar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #4a7c59 0%, #3d6b4a 100%);
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.crop-icon {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 16px;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.crop-icon.wheat {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.crop-icon.corn {
+    background: #fff8e1;
+    color: #fbc02d;
+}
+
+.crop-icon.cotton {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.card-header h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.season-info {
+    margin-bottom: 30px;
+}
+
+.season-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.season-item:last-child {
+    border-bottom: none;
+}
+
+.season-item .label {
+    font-weight: 600;
+    color: #333;
+}
+
+.season-item .period {
+    color: #4a7c59;
+    font-weight: 500;
+}
+
+/* Pest Management */
+.pest-management {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.pest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+.pest-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.pest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pest-image {
+    height: 200px;
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-placeholder {
+    font-size: 48px;
+    color: #666;
+    background: white;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pest-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.pest-content h3 {
+    color: #2d5016;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pest-crops {
+    color: #f57c00;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.pest-crops span {
+    color: #666;
+}
+
+.pest-description {
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.control-tips {
+    margin-bottom: 30px;
+}
+
+.control-tips h4 {
+    color: #4a7c59;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.control-tips ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.control-tips li {
+    padding: 6px 0;
+    color: #666;
+    position: relative;
+    padding-left: 24px;
+}
+
+.control-tips li::before {
+    content: '✓';
+    color: #4a7c59;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Government Schemes */
+.government-schemes {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+}
+
+.schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.scheme-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.scheme-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.scheme-icon {
+    background: #e8f5e8;
+    color: #4a7c59;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 24px;
+    transition: all 0.3s ease;
+}
+
+.scheme-card:hover .scheme-icon {
+    transform: scale(1.1);
+}
+
+.scheme-content h3 {
+    color: #2d5016;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.scheme-description {
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.scheme-benefits ul {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.scheme-benefits li {
+    padding: 6px 0;
+    color: #666;
+    position: relative;
+    padding-left: 24px;
+}
+
+.scheme-benefits li::before {
+    content: '●';
+    color: #4a7c59;
+    position: absolute;
+    left: 0;
+}
+
+/* Video Tutorials */
+.video-tutorials {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.video-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.video-thumbnail {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.video-card:hover .video-thumbnail img {
+    transform: scale(1.05);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.video-info {
+    padding: 30px;
+}
+
+.video-info h3 {
+    color: #2d5016;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.video-info p {
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.video-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.video-meta .rating {
+    color: #fbc02d;
+}
+
+/* Buttons */
+.btn {
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    min-width: 140px;
+}
+
+.btn-small {
+    padding: 12px 24px;
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.btn-primary {
+    background: #4a7c59;
+    color: white;
+    box-shadow: 0 4px 15px rgba(74, 124, 89, 0.3);
+}
+
+.btn-primary:hover {
+    background: #3d6b4a;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #4a7c59;
+    border: 2px solid #4a7c59;
+}
+
+.btn-secondary:hover {
+    background: #4a7c59;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Footer - Matching HOME exactly */
+.footer {
+    background: #2d5016;
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #a8d5a8;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.footer-logo i {
+    color: #a8d5a8;
+    font-size: 28px;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact-info i {
+    color: #a8d5a8;
+    width: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #a8d5a8;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #a8d5a8;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 50px;
+        transition: left 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 15px 20px;
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .header-content h1 {
+        font-size: 32px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .header-content p {
+        font-size: 18px;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .weather-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .weather-details {
+        justify-content: center;
+    }
+
+    .weather-forecast {
+        margin: 0;
+        text-align: center;
+    }
+
+    .calendar-grid,
+    .pest-grid,
+    .schemes-grid,
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pest-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .features {
+        padding: 60px 0;
+    }
+
+    .crop-calendars,
+    .pest-management,
+    .government-schemes,
+    .video-tutorials {
+        padding: 60px 0;
+    }
+
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .page-header {
+        padding: 100px 0 60px;
+    }
+
+    .header-content h1 {
+        font-size: 28px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .weather-card {
+        padding: 20px;
+    }
+
+    .calendar-card,
+    .pest-card,
+    .scheme-card,
+    .video-card {
+        margin: 0 10px;
+    }
+
+    .card-content,
+    .pest-content,
+    .video-info {
+        padding: 20px;
+    }
+
+    .scheme-card {
+        padding: 30px 20px;
+    }
+
+    .btn {
+        min-width: 120px;
+        font-size: 14px;
+        padding: 12px 24px;
+    }
+}
